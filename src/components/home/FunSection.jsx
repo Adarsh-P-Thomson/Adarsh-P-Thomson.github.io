@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import AnimatedSection from '../common/AnimatedSection';
 import { FaGamepad, FaSpaceShuttle, FaFilm, FaBook, FaJedi } from 'react-icons/fa';

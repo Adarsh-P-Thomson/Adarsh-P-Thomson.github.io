@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import AnimatedSection from '../common/AnimatedSection';
 import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
