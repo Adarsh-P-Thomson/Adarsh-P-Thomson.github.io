@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import AnimatedSection from '../common/AnimatedSection';
 import { FaTrophy, FaStar, FaAward, FaMedal } from 'react-icons/fa';

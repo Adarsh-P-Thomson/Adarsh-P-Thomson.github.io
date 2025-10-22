@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 
 const AnimatedSection = ({ children, className = '', delay = 0 }) => {

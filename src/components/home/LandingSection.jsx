@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import { FaArrowDown } from 'react-icons/fa';
 import GlitchText from '../common/GlitchText';

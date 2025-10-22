@@ -1,5 +1,6 @@
+'use client'
+
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -32,6 +33,8 @@ const Navbar = () => {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+    } else if (path === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     setIsOpen(false);
   };
@@ -43,14 +46,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <button onClick={() => handleNavClick('/')} className="flex items-center">
             <motion.span 
               className="text-2xl font-bold neon-text"
               whileHover={{ scale: 1.05 }}
             >
               {'<AP/>'}
             </motion.span>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

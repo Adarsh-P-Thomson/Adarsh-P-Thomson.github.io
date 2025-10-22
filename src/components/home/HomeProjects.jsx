@@ -1,3 +1,5 @@
+'use client'
+
 import AnimatedSection from '../common/AnimatedSection';
 import ProjectCard from '../common/ProjectCard';
 

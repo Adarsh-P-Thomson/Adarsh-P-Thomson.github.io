@@ -1,3 +1,5 @@
+'use client'
+
 import Navbar from '../common/Navbar';
 import Footer from '../common/Footer';
 import ParticlesBackground from '../common/ParticlesBackground';
