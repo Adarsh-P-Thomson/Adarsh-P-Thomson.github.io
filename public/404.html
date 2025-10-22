@@ -6,9 +6,13 @@
   <script>
     // Store the intended URL in sessionStorage to be picked up by the main app
     sessionStorage.redirect = location.href;
+
+    // Redirect to the homepage after a 3-second delay to show the animation
+    setTimeout(function() {
+      window.location.href = '/';
+    }, 3000);
   </script>
-  <!-- Redirect to the homepage after a 3-second delay to show the animation -->
-  <meta http-equiv="refresh" content="3;URL='/'">
+  <!-- The meta refresh tag is removed in favor of the JavaScript redirect -->
   <style>
     body {
       background-color: #0a0a1a; /* A dark space-like blue */
