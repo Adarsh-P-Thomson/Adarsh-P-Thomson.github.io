@@ -39,9 +39,9 @@ const LandingSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <span className="text-cyber-purple">Full-Stack Developer</span>
+            <span className="text-cyber-purple">Software Developer</span>
             <span className="mx-3">|</span>
-            <span className="text-cyber-cyan">UI/UX Enthusiast</span>
+            <span className="text-cyber-cyan">Tech Enthusiast</span>
           </motion.div>
           
           <motion.p
@@ -50,8 +50,8 @@ const LandingSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            Creating awe-striking digital experiences that blend cutting-edge technology
-            with stunning design. Welcome to my cyberpunk corner of the web.
+            As a Cloud Engineer and motivated SDE, I architect and execute innovative solutions,
+            transforming ambitious ideas into reality.
           </motion.p>
           
           <motion.div

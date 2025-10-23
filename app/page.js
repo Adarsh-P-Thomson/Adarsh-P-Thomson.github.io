@@ -22,11 +22,7 @@ export default function HomePage() {
                 About Me
               </h2>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto text-center leading-relaxed">
-                I'm a passionate full-stack developer with a love for creating immersive digital experiences. 
-                My journey in tech started with a fascination for how things work, and has evolved into a 
-                career dedicated to building innovative solutions. When I'm not coding, you'll find me 
-                exploring the latest tech trends, gaming, or diving into sci-fi worlds. I believe in the 
-                power of technology to transform lives and create meaningful connections.
+                I'm a builder and a problem-solver, driven to transform complex challenges into impactful, immersive digital experiences. My passion lies in the entire journey of creation—from architecting secure cloud systems and full-stack applications to diving deep into AI. I thrive on technical challenges and believe in fostering innovative environments where ideas can flourish and create something truly meaningful.
               </p>
             </div>
           </div>
