@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FaArrowDown } from 'react-icons/fa';
+import profileImage from '../../assets/profile.jpg'; // Make sure this path is correct
 import GlitchText from '../common/GlitchText';
 
 const LandingSection = () => {
@@ -13,7 +14,13 @@ const LandingSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative pt-16">
+    <section className="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden">
+      <img
+        src={profileImage.src}
+        alt="Adarsh P Thomson Profile"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[650px] md:h-[650px] object-cover rounded-full opacity-15 -z-10"
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

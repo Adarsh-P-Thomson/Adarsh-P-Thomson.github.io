@@ -11,6 +11,7 @@
   
   --animate-glitch: glitch 1s linear infinite;
   --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
 }
 
 @layer base {
