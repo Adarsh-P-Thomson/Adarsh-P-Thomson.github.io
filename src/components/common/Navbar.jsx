@@ -18,23 +18,24 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/#about' },
-    { name: 'Skills', path: '/#skills' },
-    { name: 'Projects', path: '/#projects' },
-    { name: 'Experience', path: '/#experience' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'Home', path: '/', type: 'page' },
+    { name: 'About', path: '/about', type: 'page' },
+    { name: 'Projects', path: '/projects', type: 'page' },
+    { name: 'Experience', path: '/experience', type: 'page' },
+    { name: 'Contact', path: '/contact', type: 'page' },
   ];
 
-  const handleNavClick = (path) => {
-    if (path.startsWith('/#')) {
+  const handleNavClick = (path, type) => {
+    if (type === 'section' && path.startsWith('/#')) {
       const sectionId = path.substring(2);
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else if (path === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.location.href = '/';
+    } else {
+      window.location.href = path;
     }
     setIsOpen(false);
   };
@@ -46,7 +47,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button onClick={() => handleNavClick('/')} className="flex items-center">
+          <button onClick={() => handleNavClick('/', 'page')} className="flex items-center">
             <motion.span 
               className="text-2xl font-bold neon-text"
               whileHover={{ scale: 1.05 }}
@@ -60,7 +61,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
-                onClick={() => handleNavClick(item.path)}
+                onClick={() => handleNavClick(item.path, item.type)}
                 className="text-gray-300 hover:text-cyber-blue transition-colors relative group"
                 whileHover={{ scale: 1.05 }}
               >
@@ -93,7 +94,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <motion.button
                   key={item.name}
-                  onClick={() => handleNavClick(item.path)}
+                  onClick={() => handleNavClick(item.path, item.type)}
                   className="block w-full text-left text-gray-300 hover:text-cyber-blue transition-colors py-2"
                   whileHover={{ x: 10 }}
                 >

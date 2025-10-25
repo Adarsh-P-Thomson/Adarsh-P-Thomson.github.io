@@ -9,7 +9,8 @@ import {
 } from 'react-icons/fa';
 import { 
   SiTailwindcss, SiMongodb, SiPostgresql, SiMysql, SiJavascript,
-  SiSpringboot, SiGooglecloud, SiFigma, SiVultr, SiOpenai, SiC
+  SiSpringboot, SiGooglecloud, SiFigma, SiVultr, SiOpenai, SiC,
+  SiVuedotjs, SiVite, SiNextdotjs
 } from 'react-icons/si';
 
 const SkillsSection = () => {
@@ -39,6 +40,9 @@ const SkillsSection = () => {
         { name: 'Node.js', icon: FaNodeJs },
         { name: 'Spring Boot', icon: SiSpringboot },
         { name: 'Tailwind CSS', icon: SiTailwindcss },
+        { name: 'Vue.js', icon: SiVuedotjs },
+        { name: 'Next.js', icon: SiNextdotjs },
+        { name: 'Vite', icon: SiVite },
       ],
     },
     {

@@ -1,0 +1,29 @@
+{
+  "socialProfiles": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/Adarsh-P-Thomson",
+      "icon": "FaGithub"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/adarsh-p-thomson-81990b259/",
+      "icon": "FaLinkedin"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/_stark1ll3r_/",
+      "icon": "FaInstagram"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@HarbingerCodes",
+      "icon": "FaYoutube"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/adarsh_p_t",
+      "icon": "FaTwitter"
+    }
+  ]
+}

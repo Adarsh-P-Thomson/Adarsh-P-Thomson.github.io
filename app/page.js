@@ -30,7 +30,7 @@ export default function HomePage() {
         <SkillsSection />
         <HomeProjects />
         <ExperienceSection />
-        <HomeAchievements />
+        {/* <HomeAchievements /> */}
         <CertificatesSection />
         <FunSection />
         <ContactSection />

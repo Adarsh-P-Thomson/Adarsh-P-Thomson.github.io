@@ -6,32 +6,52 @@ import ProjectCard from '../common/ProjectCard';
 const HomeProjects = () => {
   const projects = [
     {
-      title: 'Cyberpunk Portfolio',
-      description: 'A stunning, highly interactive portfolio website with cyberpunk aesthetics, particle effects, and smooth animations. Built with React, Vite, and Framer Motion.',
-      tags: ['React', 'Vite', 'Tailwind', 'Framer Motion'],
+      title: 'Groundwale Website & App',
+      description: 'Developing the web presence for Groundwale on AWS infrastructure, including a Next.js/Vite website and a company app with scalable backend on AWS (EC2, S3, RDS, Lambda).',
+      tags: ['Next.js', 'Vite', 'AWS', 'EC2', 'S3', 'RDS', 'Lambda'],
+      githubUrl: 'https://github.com/Adarsh-P-Thomson/GroundWale',
+      liveUrl: '#',
+      status: 'October 2025 – Present'
+    },
+    {
+      title: 'Way For Sky Academy',
+      description: 'Academy website for wayforsky.com with cloud deployment and scalable architecture on GCP, including CDN and load balancers. Developed using React.js frontend and Java backend.',
+      tags: ['React.js', 'Java', 'GCP', 'CDN', 'Load Balancers'],
+      githubUrl: 'https://github.com/Adarsh-P-Thomson/WayForSky',
+      liveUrl: 'https://wayforsky.com',
+      status: 'September 2025 – Ongoing'
+    },
+    {
+      title: 'Secure Data Capsule System (.cpsx)',
+      description: 'Custom encrypted file format designed for fintech applications with AES-256 encryption, RSA key exchange, policy-based access, and Zero Trust principles. Integrated with PostgreSQL and MongoDB.',
+      tags: ['Java', 'Maven', 'AES-256', 'RSA', 'PostgreSQL', 'MongoDB'],
+      githubUrl: 'https://github.com/Adarsh-P-Thomson/Dynamic-Trust-Aware-Capsule',
+      liveUrl: '#',
+      status: 'Completed July 2025'
+    },
+    {
+      title: 'Matzah Foods Website',
+      description: 'Led a team of 3 to design, develop, and deploy the official website for Matzah Foods Pvt. Ltd. Applied on-page SEO strategies and managed client communication.',
+      tags: ['Vite', 'Vue.js', 'Tailwind CSS', 'SEO'],
+      githubUrl: 'https://github.com/Adarsh-P-Thomson/MatzahFoods',
+      liveUrl: '#',
+      status: 'Completed October 2024'
+    },
+    {
+      title: 'Barzel Engineering',
+      description: 'Rapidly designed, built, and deployed a company website for Barzel Engineering. The entire project was completed and deployed within 12 hours.',
+      tags: ['Vue.js', 'Rapid Development'],
+      githubUrl: 'https://github.com/Adarsh-P-Thomson/barzelengineering',
+      liveUrl: 'https://barzelengineering.com',
+      status: 'Completed'
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'A stunning, highly interactive portfolio website with cyberpunk aesthetics, particle effects, and smooth animations. Built with Next.js and Framer Motion.',
+      tags: ['Next.js', 'React', 'Tailwind', 'Framer Motion'],
       githubUrl: 'https://github.com/Adarsh-P-Thomson/Adarsh-P-Thomson.github.io',
       liveUrl: 'https://adarshpthomson.me',
-    },
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with real-time inventory management, secure payment processing, and admin dashboard.',
-      tags: ['Next.js', 'Node.js', 'MongoDB', 'Stripe'],
-      githubUrl: '#',
-      liveUrl: '#',
-    },
-    {
-      title: 'AI Chat Application',
-      description: 'Real-time chat application powered by AI, featuring smart replies, sentiment analysis, and multi-language support.',
-      tags: ['React', 'WebSocket', 'Python', 'OpenAI'],
-      githubUrl: '#',
-      liveUrl: '#',
-    },
-    {
-      title: 'Task Management Dashboard',
-      description: 'Comprehensive project management tool with kanban boards, time tracking, and team collaboration features.',
-      tags: ['TypeScript', 'React', 'GraphQL', 'PostgreSQL'],
-      githubUrl: '#',
-      liveUrl: '#',
+      status: 'Live'
     },
   ];
 

@@ -1,46 +1,39 @@
 'use client'
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../common/AnimatedSection';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
+import socialProfiles from '../../../onlineprofiles.json';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission (could integrate with email service)
-    alert('Thanks for reaching out! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const getIconComponent = (iconName) => {
+    const icons = {
+      FaGithub,
+      FaLinkedin, 
+      FaInstagram,
+      FaYoutube,
+      FaTwitter
+    };
+    return icons[iconName] || FaGithub;
   };
 
   const contactInfo = [
     {
       icon: FaEnvelope,
       title: 'Email',
-      value: 'contact@adarshpthomson.me',
-      link: 'mailto:contact@adarshpthomson.me'
+      value: 'adarshpthomson7@gmail.com',
+      link: 'mailto:adarshpthomson7@gmail.com'
     },
     {
       icon: FaPhone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91 9036844542',
+      link: 'tel:+919036844542'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Bangalore, India',
       link: null
     }
   ];
@@ -53,139 +46,105 @@ const ContactSection = () => {
             Get In Touch
           </h2>
           <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out!
+            Ready to collaborate? Visit my dedicated contact page for detailed ways to reach me!
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
+        {/* Quick Contact Info */}
+        <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-cyber-cyan mb-6">
-                Contact Information
-              </h3>
-              
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
-                  className="glass rounded-lg p-6 flex items-center gap-4"
-                  whileHover={{ x: 10 }}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="glass rounded-lg p-6 text-center"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <div className="bg-cyber-blue/10 p-4 rounded-lg">
-                    <info.icon className="text-cyber-blue text-2xl" />
+                  <div className="bg-cyber-blue/10 p-4 rounded-lg w-fit mx-auto mb-4">
+                    <info.icon className="text-cyber-blue text-3xl" />
                   </div>
-                  <div>
-                    <h4 className="text-gray-400 text-sm">{info.title}</h4>
-                    {info.link ? (
-                      <a 
-                        href={info.link}
-                        className="text-gray-200 hover:text-cyber-cyan transition-colors"
-                      >
-                        {info.value}
-                      </a>
-                    ) : (
-                      <p className="text-gray-200">{info.value}</p>
-                    )}
-                  </div>
+                  <h4 className="text-gray-400 text-sm mb-2">{info.title}</h4>
+                  {info.link ? (
+                    <a 
+                      href={info.link}
+                      className="text-gray-200 hover:text-cyber-cyan transition-colors font-medium"
+                    >
+                      {info.value}
+                    </a>
+                  ) : (
+                    <p className="text-gray-200 font-medium">{info.value}</p>
+                  )}
                 </motion.div>
               ))}
+            </div>
+          </AnimatedSection>
+
+          {/* Social Links */}
+          <AnimatedSection delay={0.3}>
+            <motion.div
+              className="text-center p-8 glass rounded-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              <h4 className="text-gray-300 text-lg mb-6">Connect with me on social media</h4>
+              <div className="flex justify-center gap-6 mb-8">
+                {socialProfiles.socialProfiles.map((profile, index) => {
+                  const IconComponent = getIconComponent(profile.icon);
+                  return (
+                    <motion.a
+                      key={profile.name}
+                      href={profile.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-cyber-cyan transition-colors p-3 rounded-lg hover:bg-cyber-cyan/10"
+                      whileHover={{ scale: 1.2, y: -2 }}
+                      whileTap={{ scale: 0.9 }}
+                      title={profile.name}
+                    >
+                      <IconComponent size={24} />
+                    </motion.a>
+                  );
+                })}
+              </div>
+
+              {/* Call to Action */}
+              <motion.div
+                className="pt-6 border-t border-gray-700"
+              >
+                <p className="text-gray-300 mb-6">
+                  For detailed contact options and collaboration opportunities
+                </p>
+                <motion.a
+                  href="/contact"
+                  className="inline-block px-8 py-4 bg-cyber-purple text-white font-bold rounded-lg neon-glow hover:bg-cyber-blue transition-all"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Visit Contact Page
+                </motion.a>
+              </motion.div>
 
               {/* Visual Element */}
               <motion.div
-                className="hidden lg:block mt-12 p-8 glass rounded-lg"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
+                className="mt-8 p-6"
+                animate={{ y: [0, -10] }}
+                transition={{ 
+                  duration: 3, 
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut"
+                }}
               >
                 <p className="text-cyber-purple text-lg italic">
                   "Let's build something amazing together!"
                 </p>
               </motion.div>
-            </div>
-          </AnimatedSection>
-
-          {/* Contact Form */}
-          <AnimatedSection delay={0.2}>
-            <form onSubmit={handleSubmit} className="glass rounded-lg p-8">
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-gray-300 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-cyber-blue focus:outline-none text-gray-200"
-                    placeholder="Your Name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-gray-300 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-cyber-blue focus:outline-none text-gray-200"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-gray-300 mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-cyber-blue focus:outline-none text-gray-200"
-                    placeholder="What's this about?"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="5"
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:border-cyber-blue focus:outline-none text-gray-200 resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  className="w-full px-8 py-4 bg-cyber-blue text-cyber-dark font-bold rounded-lg neon-glow hover:bg-cyber-cyan transition-all flex items-center justify-center gap-2"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <FaPaperPlane />
-                  Send Message
-                </motion.button>
-              </div>
-            </form>
+            </motion.div>
           </AnimatedSection>
         </div>
       </div>

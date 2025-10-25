@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image }) => {
+const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, status }) => {
   return (
     <motion.div
       whileHover={{ y: -10, scale: 1.02 }}
@@ -23,7 +23,14 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image }) =>
       
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-2xl font-bold mb-2 neon-text">{title}</h3>
+        <div className="flex justify-between items-start mb-2">
+          <h3 className="text-2xl font-bold neon-text">{title}</h3>
+          {status && (
+            <span className="text-xs px-2 py-1 rounded-full bg-cyber-green/20 text-cyber-green border border-cyber-green/30 whitespace-nowrap ml-2">
+              {status}
+            </span>
+          )}
+        </div>
         <p className="text-gray-400 mb-4 line-clamp-3">{description}</p>
         
         {/* Tags */}

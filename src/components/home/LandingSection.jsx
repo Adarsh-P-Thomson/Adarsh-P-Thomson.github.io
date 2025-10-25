@@ -1,9 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import { FaArrowDown } from 'react-icons/fa';
+import { FaArrowDown, FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import profileImage from '../../assets/profile.jpg'; // Make sure this path is correct
 import GlitchText from '../common/GlitchText';
+import socialProfiles from '../../../onlineprofiles.json';
 
 const LandingSection = () => {
   const scrollToNext = () => {
@@ -11,6 +12,17 @@ const LandingSection = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const getIconComponent = (iconName) => {
+    const icons = {
+      FaGithub,
+      FaLinkedin, 
+      FaInstagram,
+      FaYoutube,
+      FaTwitter
+    };
+    return icons[iconName] || FaGithub;
   };
 
   return (
@@ -62,7 +74,7 @@ const LandingSection = () => {
           </motion.p>
           
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
@@ -84,14 +96,44 @@ const LandingSection = () => {
               Get In Touch
             </motion.button>
           </motion.div>
+
+          {/* Social Links */}
+          <motion.div
+            className="flex justify-center gap-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.0 }}
+          >
+            {socialProfiles.socialProfiles.map((profile, index) => {
+              const IconComponent = getIconComponent(profile.icon);
+              return (
+                <motion.a
+                  key={profile.name}
+                  href={profile.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyber-cyan transition-colors"
+                  whileHover={{ scale: 1.2, y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <IconComponent size={24} />
+                </motion.a>
+              );
+            })}
+          </motion.div>
         </motion.div>
         
         {/* Scroll Indicator */}
         <motion.button
           onClick={scrollToNext}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-cyber-cyan cursor-pointer"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
+          animate={{ y: [0, 10] }}
+          transition={{ 
+            duration: 1.5, 
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
         >
           <FaArrowDown size={32} />
         </motion.button>

@@ -63,7 +63,10 @@ const FunSection = () => {
             <AnimatedSection key={interest.title} delay={index * 0.1}>
               <motion.div
                 className="glass rounded-lg p-6"
-                whileHover={{ scale: 1.05, rotate: [0, -2, 2, 0] }}
+                whileHover={{ 
+                  scale: 1.05,
+                  rotate: 2
+                }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <interest.icon className={`text-${interest.color} text-4xl mb-4`} />
