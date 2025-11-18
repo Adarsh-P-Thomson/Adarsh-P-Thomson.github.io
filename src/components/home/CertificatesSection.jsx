@@ -7,40 +7,53 @@ import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 const CertificatesSection = () => {
   const certificates = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      url: '#'
+      name: 'Career Essentials in GitHub Copilot Professional Certificate',
+      issuer: 'Github',
+      date: '2025',
+      url: 'https://www.linkedin.com/learning/certificates/34d88fbf95065a5ec29f58fdf9edecb3b225801cb1caa4eeb0a5a3bf4a37d1ba'
     },
     {
-      name: 'Professional Scrum Master',
-      issuer: 'Scrum.org',
-      date: '2023',
-      url: '#'
+      name: 'Introducing Generative AI with AWS',
+      issuer: 'Udacity',
+      date: '2025',
+      url: 'https://www.udacity.com/certificate/e/2a5a4bd8-3c3d-11f0-a66d-07aa5f3bf8e6'
     },
     {
-      name: 'React Advanced Patterns',
-      issuer: 'Frontend Masters',
-      date: '2022',
-      url: '#'
+      name: 'Foundations of Digital Marketing ',
+      issuer: 'Udacity',
+      date: '2025',
+      url: 'https://www.udacity.com/certificate/e/fd968046-b7ba-11ef-9e66-d3060daaa429'
     },
     {
-      name: 'MongoDB Certified Developer',
-      issuer: 'MongoDB University',
-      date: '2022',
-      url: '#'
+      name: 'JavaScript Foundations Professional Certificate by Mozilla',
+      issuer: 'Mozilla',
+      date: '2024',
+      url: 'https://www.linkedin.com/learning/certificates/a07103aeff5625bb825e792bfb28f23e63fb9614cee988545cf490f430b1c927'
     },
     {
-      name: 'Docker & Kubernetes',
-      issuer: 'Linux Foundation',
-      date: '2021',
-      url: '#'
+      name: 'OpenEDG Python Institute Certificate of Completion',
+      issuer: 'OpenEDG',
+      date: '2024',
+      url: 'https://www.linkedin.com/learning/certificates/3eafcac4e73a5aa72c86877d7fa5fef9c6875fb82bf2a36faa0aeffc0352958a'
     },
     {
-      name: 'Full-Stack Web Development',
-      issuer: 'Coursera',
-      date: '2021',
-      url: '#'
+      name: 'Build Your Generative AI Productivity Skills with Microsoft and LinkedIn',
+      issuer: 'Microsoft and LinkedIn',
+      date: '2024',
+      url: 'https://www.linkedin.com/learning/certificates/a358bd798c1e9a276e58bdeb7c7895dcd0b748ea471a35f210a6b4e442eeef1b'
+    },
+    {
+      name: 'Career Essentials in Generative AI by Microsoft and LinkedIn',
+      issuer: 'Microsoft and LinkedIn',
+      date: '2024',
+      url: 'https://www.linkedin.com/learning/certificates/6c3e4d3d7f072bcd6411b923cb8edb1b7ba3896c653001a568a3d7b8672e466d'
+    }
+    ,
+    {
+      name: 'Career Essentials in Software Development by Microsoft and LinkedIn',
+      issuer: 'Microsoft and LinkedIn',
+      date: '2024',
+      url: 'https://www.linkedin.com/learning/certificates/38e2cefcb962332d9b042e4ded2dbe8ce305fe307bf02085f8433b3db2563916'
     }
   ];
 
