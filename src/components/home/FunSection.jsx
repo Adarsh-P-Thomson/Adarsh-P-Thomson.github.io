@@ -9,7 +9,7 @@ const FunSection = () => {
     {
       icon: FaGamepad,
       title: 'Gaming',
-      description: 'Cyberpunk 2077, Star Wars games, and competitive FPS',
+      description: 'Borderlands, Need for Speed games, and FPS and more',
       color: 'cyber-blue'
     },
     {
@@ -21,28 +21,28 @@ const FunSection = () => {
     {
       icon: FaFilm,
       title: 'Sci-Fi Movies',
-      description: 'Blade Runner, The Matrix, Interstellar',
+      description: 'Inception, The Matrix, Interstellar',
       color: 'cyber-cyan'
     },
     {
       icon: FaSpaceShuttle,
-      title: 'Space Enthusiast',
-      description: 'Fascinated by space exploration and astronomy',
+      title: 'Tech Enthusiast',
+      description: 'Fascinated by quantum tech and cutting-edge tech',
       color: 'cyber-red'
     },
     {
       icon: FaBook,
-      title: 'Tech Reading',
-      description: 'Constantly learning about new technologies',
+      title: 'Book Reading',
+      description: 'Read all kinds of books, from sci-fi to self-help',
       color: 'cyber-blue'
     }
   ];
 
   const funFacts = [
     "I can code for 12 hours straight with just coffee ☕",
-    "My dream is to work at SpaceX 🚀",
+    "My dream is to build a game that becomes a cult classic 🎮",
     "I've watched every Star Wars movie at least 5 times 🎬",
-    "I built my first website at age 14 💻"
+    "I have read all Sherlock holmes books 📚",
   ];
 
   return (

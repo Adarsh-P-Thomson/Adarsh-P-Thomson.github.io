@@ -14,12 +14,15 @@ const ConnectSection = () => {
   ]
 
   const quickFacts = [
-    "🎮 Been gaming since 2005",
-    "📚 Can quote Sherlock Holmes",
+    "🎮 Been gaming since 2019",
+    "📚 Can quote Star Wars",
     "☕ Code quality ∝ Coffee intake",
     "🏁 NFS MW 2005 changed my life",
     "🤓 Proud nerd since childhood",
-    "🎯 Strategy games = life"
+    "🎯 Strategy games = life",
+    "🦇 DC Comics fanboy",
+    "🎬 Nolan & Snyder are cinema gods",
+    "🏎️ Follows WRC & F1 religiously"
   ]
 
   return (

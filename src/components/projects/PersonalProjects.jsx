@@ -33,7 +33,7 @@ const PersonalProjects = () => {
       title: 'Portfolio Website',
       category: 'Web Development',
       period: 'Ongoing',
-      description: 'A stunning, highly interactive portfolio website with cyberpunk aesthetics, particle effects, and smooth animations.',
+      description: "You're looking at it, mate! 😎 A meta-tastic, cyberpunk-themed showcase with particle effects and buttery-smooth animations. Inception level: Portfolio.",
       purpose: 'Showcasing skills and experimenting with modern web technologies',
       features: [
         'Cyberpunk-themed design system',
@@ -226,19 +226,21 @@ const PersonalProjects = () => {
 
                 {/* Links */}
                 <div className="flex gap-3">
-                  <motion.a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 flex-1 px-4 py-2 border-2 border-gray-600 text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-800 transition-all"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaGithub />
-                    Code
-                  </motion.a>
-                  
-                  {project.links.live !== '#' && (
+                  {project.links.github && project.links.github !== '#' && (
+                    <motion.a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 flex-1 px-4 py-2 border-2 border-gray-600 text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-800 transition-all"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaGithub />
+                      Code
+                    </motion.a>
+                  )}
+
+                  {project.links.live && project.links.live !== '#' && (
                     <motion.a
                       href={project.links.live}
                       target="_blank"

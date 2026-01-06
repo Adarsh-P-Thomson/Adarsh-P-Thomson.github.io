@@ -17,7 +17,7 @@ const BooksSection = () => {
     {
       icon: FaBrain,
       title: "Self-Help & Strategy",
-      books: ["The Art of War - Sun Tzu", "Think and Grow Rich", "Atomic Habits"],
+      books: ["The Art of War - Sun Tzu", "Meditations - Marcus Aurelius", "Atomic Habits"],
       description: "Leveling up my mindset and strategies! 🧠",
       color: "cyber-purple",
       emoji: "🎯"
@@ -25,10 +25,10 @@ const BooksSection = () => {
   ]
 
   const funFacts = [
-    "I can quote Sherlock Holmes better than I can remember variable names 😅",
-    "The Art of War actually helped me debug complex systems!",
-    "Hardy Boys got me into problem-solving before coding did",
-    "I read books faster than I write documentation (sorry, team!) 📚"
+    "I've read more Hardy Boys books than I've written unit tests (working on that ratio) 🕵️",
+    "Sherlock Holmes taught me debugging before I even knew what a bug was 🐛",
+    "I finish books faster than I finish side projects... wait, that's too real 📚",
+    "Sun Tzu's strategies work surprisingly well in code reviews 🎯"
   ]
 
   return (

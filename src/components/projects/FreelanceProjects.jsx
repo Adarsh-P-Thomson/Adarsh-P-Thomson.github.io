@@ -20,8 +20,8 @@ const FreelanceProjects = () => {
       ],
       technologies: ['Next.js', 'Vite', 'AWS', 'EC2', 'S3', 'RDS', 'Lambda', 'React Native'],
       links: {
-        github: 'https://github.com/Adarsh-P-Thomson/GroundWale',
-        live: '#'
+        github: null, // Freelance project - code not shareable
+        live: 'https://groundwale.com'
       },
       type: 'Full-Stack Development',
       impact: 'Enterprise-level application',
@@ -41,7 +41,7 @@ const FreelanceProjects = () => {
       ],
       technologies: ['React.js', 'Java', 'GCP', 'CDN', 'Load Balancers', 'CI/CD'],
       links: {
-        github: 'https://github.com/Adarsh-P-Thomson/WayForSky',
+        github: null, // Freelance project - code not shareable
         live: 'https://wayforsky.com'
       },
       type: 'Education Platform',
@@ -62,8 +62,8 @@ const FreelanceProjects = () => {
       ],
       technologies: ['Vite', 'Vue.js', 'Tailwind CSS', 'SEO Optimization'],
       links: {
-        github: 'https://github.com/Adarsh-P-Thomson/MatzahFoods',
-        live: '#'
+        github: null, // Freelance project - code not shareable
+        live: 'https://matzahfoods.com'
       },
       type: 'Corporate Website',
       impact: 'Enhanced brand presence',
@@ -83,7 +83,7 @@ const FreelanceProjects = () => {
       ],
       technologies: ['Vue.js', 'Rapid Development', 'Fast Deployment'],
       links: {
-        github: 'https://github.com/Adarsh-P-Thomson/barzelengineering',
+        github: null, // Freelance project - code not shareable
         live: 'https://barzelengineering.com'
       },
       type: 'Quick Delivery',
@@ -231,17 +231,19 @@ const FreelanceProjects = () => {
                         </motion.a>
                       )}
                       
-                      <motion.a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 w-full px-4 py-3 border-2 border-gray-600 text-gray-300 font-medium rounded-lg hover:bg-gray-800 transition-all"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <FaGithub />
-                        View Code
-                      </motion.a>
+                      {project.links.github && project.links.github !== '#' && (
+                        <motion.a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 w-full px-4 py-3 border-2 border-gray-600 text-gray-300 font-medium rounded-lg hover:bg-gray-800 transition-all"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <FaGithub />
+                          View Code
+                        </motion.a>
+                      )}
                     </div>
                   </div>
                 </div>

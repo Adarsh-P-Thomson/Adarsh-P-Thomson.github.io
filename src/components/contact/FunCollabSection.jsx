@@ -14,7 +14,7 @@ const FunCollabSection = () => {
     {
       icon: FaDiscord,
       title: 'Discord',
-      value: 'stark1ll3r',
+      value: 'killmonger.2328',
       link: '#',
       description: 'Gaming & coding sessions',
       color: 'text-purple-400'
@@ -22,8 +22,8 @@ const FunCollabSection = () => {
     {
       icon: FaInstagram,
       title: 'Instagram',
-      value: '@_stark1ll3r_',
-      link: 'https://www.instagram.com/_stark1ll3r_/',
+      value: '@adarshpthomson',
+      link: 'https://www.instagram.com/adarshpthomson/',
       description: 'Life behind the code',
       color: 'text-pink-400'
     },
@@ -55,7 +55,7 @@ const FunCollabSection = () => {
       icon: SiSteam,
       title: 'Steam',
       value: 'stark1ll3r',
-      link: '#',
+      link: 'https://steamcommunity.com/profiles/76561199065015994/',
       description: 'Gaming together',
       color: 'text-blue-300'
     }
@@ -65,13 +65,13 @@ const FunCollabSection = () => {
     {
       icon: FaGamepad,
       title: 'Gaming',
-      description: 'FPS, Strategy, Co-op adventures',
+      description: 'FPS, Racing, Co-op adventures',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: FaCode,
       title: 'Coding',
-      description: 'Open source projects, hackathons',
+      description: 'Open source projects, hackathons, collabs',
       color: 'from-blue-500 to-cyan-500'
     },
     {

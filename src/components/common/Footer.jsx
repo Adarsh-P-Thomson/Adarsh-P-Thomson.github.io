@@ -2,13 +2,22 @@
 
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, url: 'https://github.com/Adarsh-P-Thomson', label: 'GitHub' },
-    { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaEnvelope, url: 'mailto:contact@adarshpthomson.me', label: 'Email' },
+    { icon: FaLinkedin, url: 'https://www.linkedin.com/in/adarsh-p-thomson-81990b259/', label: 'LinkedIn' },
+    { icon: FaTwitter, url: 'https://x.com/adarsh_p_t', label: 'Twitter' },
+    { icon: FaEnvelope, url: 'mailto:adarshpthomson7@gmail.com', label: 'Email' },
+  ];
+
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Skills', path: '/#skills' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -27,14 +36,14 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-cyber-blue mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
+              {quickLinks.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.path}
                     className="text-gray-400 hover:text-cyber-cyan transition-colors"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>

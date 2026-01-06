@@ -32,12 +32,12 @@ const GamingSection = () => {
       memory: "Those bullet-time shots never get old. Physics + strategy = perfection!"
     },
     {
-      title: "NFS Hot Pursuit",
-      description: "High-speed police chases! 🚔",
-      category: "Racing",
-      icon: FaCar,
+      title: "Assassin's Creed (1 to Rogue)",
+      description: "Played them all in order like a true assassin! 🗡️",
+      category: "Action-Adventure",
+      icon: FaCrosshairs,
       color: "cyber-green",
-      memory: "Being both the hunter and the hunted - what a concept!"
+      memory: "From Altaïr to Shay - completed the entire saga chronologically. Nothing beats that parkour and stealth combo!"
     }
   ]
 

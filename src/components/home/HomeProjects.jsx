@@ -9,15 +9,15 @@ const HomeProjects = () => {
       title: 'Groundwale Website & App',
       description: 'Developing the web presence for Groundwale on AWS infrastructure, including a Next.js/Vite website and a company app with scalable backend on AWS (EC2, S3, RDS, Lambda).',
       tags: ['Next.js', 'Vite', 'AWS', 'EC2', 'S3', 'RDS', 'Lambda'],
-      githubUrl: 'https://github.com/Adarsh-P-Thomson/GroundWale',
-      liveUrl: '#',
+      githubUrl: null, // Freelance project - code not shareable
+      liveUrl: 'https://groundwale.com',
       status: 'October 2025 – Present'
     },
     {
       title: 'Way For Sky Academy',
       description: 'Academy website for wayforsky.com with cloud deployment and scalable architecture on GCP, including CDN and load balancers. Developed using React.js frontend and Java backend.',
       tags: ['React.js', 'Java', 'GCP', 'CDN', 'Load Balancers'],
-      githubUrl: 'https://github.com/Adarsh-P-Thomson/WayForSky',
+      githubUrl: null, // Freelance project - code not shareable
       liveUrl: 'https://wayforsky.com',
       status: 'September 2025 – Ongoing'
     },
@@ -26,28 +26,28 @@ const HomeProjects = () => {
       description: 'Custom encrypted file format designed for fintech applications with AES-256 encryption, RSA key exchange, policy-based access, and Zero Trust principles. Integrated with PostgreSQL and MongoDB.',
       tags: ['Java', 'Maven', 'AES-256', 'RSA', 'PostgreSQL', 'MongoDB'],
       githubUrl: 'https://github.com/Adarsh-P-Thomson/Dynamic-Trust-Aware-Capsule',
-      liveUrl: '#',
+      liveUrl: null, // Security library - no live demo
       status: 'Completed July 2025'
     },
     {
       title: 'Matzah Foods Website',
       description: 'Led a team of 3 to design, develop, and deploy the official website for Matzah Foods Pvt. Ltd. Applied on-page SEO strategies and managed client communication.',
       tags: ['Vite', 'Vue.js', 'Tailwind CSS', 'SEO'],
-      githubUrl: 'https://github.com/Adarsh-P-Thomson/MatzahFoods',
-      liveUrl: '#',
+      githubUrl: null, // Freelance project - code not shareable
+      liveUrl: 'https://matzahfoods.com',
       status: 'Completed October 2024'
     },
     {
       title: 'Barzel Engineering',
       description: 'Rapidly designed, built, and deployed a company website for Barzel Engineering. The entire project was completed and deployed within 12 hours.',
       tags: ['Vue.js', 'Rapid Development'],
-      githubUrl: 'https://github.com/Adarsh-P-Thomson/barzelengineering',
+      githubUrl: null, // Freelance project - code not shareable
       liveUrl: 'https://barzelengineering.com',
       status: 'Completed'
     },
     {
       title: 'Portfolio Website',
-      description: 'A stunning, highly interactive portfolio website with cyberpunk aesthetics, particle effects, and smooth animations. Built with Next.js and Framer Motion.',
+      description: "You're looking at it, mate! 😎 A meta-tastic, cyberpunk-themed showcase with particle effects and buttery-smooth animations. Inception level: Portfolio.",
       tags: ['Next.js', 'React', 'Tailwind', 'Framer Motion'],
       githubUrl: 'https://github.com/Adarsh-P-Thomson/Adarsh-P-Thomson.github.io',
       liveUrl: 'https://adarshpthomson.me',

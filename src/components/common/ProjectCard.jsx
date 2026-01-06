@@ -49,7 +49,7 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, stat
         
         {/* Links */}
         <div className="flex gap-4">
-          {githubUrl && (
+          {githubUrl && githubUrl !== '#' && (
             <a
               href={githubUrl}
               target="_blank"
@@ -60,7 +60,7 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, stat
               <span>Code</span>
             </a>
           )}
-          {liveUrl && (
+          {liveUrl && liveUrl !== '#' && (
             <a
               href={liveUrl}
               target="_blank"
